@@ -1,13 +1,11 @@
 {
-  "name": "factorio-mod-template",
+  "name": "fulgora-scavenger-sovereign",
   "version": "0.1.0",
-  "title": "Factorio Mod Template",
+  "title": "Fulgora: Scavenger to Sovereign",
   "author": "RedRafe",
-  "source": "https://github.com/RedRafe/factorio-mod-template",
-  "homepage": "https://mods.factorio.com/mod/factorio-mod-template",
-  "dependencies": [
-    "base >= 2.1"
-  ],
-  "description": "A ready-to-use template for Factorio mods",
+  "source": "https://github.com/RedRafe/fulgora-scavenger-sovereign",
+  "homepage": "https://mods.factorio.com/mod/fulgora-scavenger-sovereign",
+  "dependencies": [ "base >= 2.1", "space-age >= 2.1" ],
+  "description": "Unearth the forgotten arts of Fulgora's long-dead civilization. Move beyond mere scavenging in the storm-swept ruins of the past to master their highest engineering legacy. By decoding their ancient knowledge, you will learn to sift the infinite heavy oil seas for ionized sludge—reconstructing their lost technological wonders into a completely deterministic, bottom-up industrial powerhouse.",
   "factorio_version": "2.1"
 }

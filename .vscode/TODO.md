@@ -1,0 +1,1 @@
+ionized-slurry-centrifuging should not have main_product and have its own icon
