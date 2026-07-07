@@ -1,26 +1,20 @@
 -- recipe.lua
 
-local sqrt2 = math.sqrt(2)
+local CRAFTABLE_ON_FULGORA = true
 
-local function base_shift(obj, x, y)
-    if not obj.icon_size then
-        obj.icon_size = 64
+local fulgora_only = function()
+    if not CRAFTABLE_ON_FULGORA then
+        return nil
     end
-    if not obj.scale then
-        obj.scale = 1
-    end
-    obj.shift = { x * 40, y * 40 }
-    return obj
+
+    return {
+        {
+            property = 'magnetic-field',
+            min = 99,
+            max = 99,
+        },
+    }
 end
-
-local shift = {
-    top_middle = function(obj) return base_shift(obj, 0, -1) end,
-    top_left = function(obj) return base_shift(obj, -1, -1) end,
-    top_right = function(obj) return base_shift(obj, 1, -1) end,
-    bottom_left = function(obj) return base_shift(obj, -1, 1) end,
-    bottom_right = function(obj) return base_shift(obj, 1, 1) end,
-    bottom_middle = function(obj) return base_shift(obj, 0, 1) end,
-}
 
 data:extend({
     --------------------------------------------------------------------------
@@ -30,10 +24,7 @@ data:extend({
     {
         type = 'recipe',
         name = 'quartz-glass-plate',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/quartz-glass-plate.png', icon_size = 1024, scale = 1 },
-            { icon = '__base__/graphics/icons/stone.png', icon_size = 64, mipmaps = 4, scale = 8, shift = {-256,-256} },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/icons/basic-quartz-glass-plate.png',
         localised_name = { 'recipe-name.quartz-glass-plate' },
         categories = { 'smelting' },
         subgroup = 'fulgora-processes',
@@ -47,6 +38,7 @@ data:extend({
             { type = 'item', name = 'quartz-glass-plate', amount = 1 },
         },
         allow_productivity = false,
+        surface_conditions = fulgora_only(),
     },
 
     --------------------------------------------------------------------------
@@ -64,10 +56,12 @@ data:extend({
         ingredients = { { type = 'fluid', name = 'heavy-oil', amount = 100 } },
         results = { { type = 'fluid', name = 'ionized-sludge', amount = 100 } },
         allow_productivity = false,
+        surface_conditions = fulgora_only(),
     },
     {
         type = 'recipe',
         name = 'ionized-sludge-centrifuging',
+        icon = '__fulgora-scavenger-sovereign__/graphics/icons/ionized-sludge-centrifuging.png',
         categories = { 'oil-processing' },
         subgroup = 'fulgora-processes',
         order = 'a[dredging]-b[centrifuging]',
@@ -89,11 +83,7 @@ data:extend({
     {
         type = 'recipe',
         name = 'slurry-acid-leaching',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/metallic-slurry.png', icon_size = 1024, scale = sqrt2/16 },
-            shift.bottom_left{ icon = '__base__/graphics/icons/iron-ore.png', mipmaps = 4 },
-            shift.bottom_right{ icon = '__base__/graphics/icons/copper-ore.png', mipmaps = 4 },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/icons/slurry-acid-leaching.png',
         categories = { 'chemistry' },
         subgroup = 'fulgora-processes',
         order = 'b[leaching]-a[crude-leaching]',
@@ -179,6 +169,7 @@ data:extend({
         ingredients = { { type = 'fluid', name = 'heavy-oil', amount = 100 } },
         results = { { type = 'fluid', name = 'superheated-heavy-oil', amount = 100, temperature = 350 } },
         allow_productivity = false,
+        surface_conditions = fulgora_only(),
     },
     {
         type = 'recipe',
@@ -201,10 +192,7 @@ data:extend({
     {
         type = 'recipe',
         name = 'carbon-synthesis',
-        icons = {
-            shift.bottom_right{ icon = '__space-age__/graphics/icons/carbon.png', mipmaps = 4, scale = sqrt2 },
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/carbon-coke.png', icon_size = 1024, scale = sqrt2/16 },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/icons/carbon-synthesis.png',
         categories = { 'chemistry' },
         subgroup = 'fulgora-processes',
         order = 'c[pyrolysis]-c[carbon]',
@@ -284,10 +272,7 @@ data:extend({
     {
         type = 'recipe',
         name = 'crushed-holmium-liquefaction',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/crushed-holmium.png', icon_size = 1024, scale = sqrt2/16 },
-            shift.bottom_middle{ icon = '__space-age__/graphics/icons/fluid/holmium-solution.png', mipmaps = 4, scale = sqrt2 },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/icons/crushed-holmium-liquefaction.png',
         categories = { 'chemistry' },
         subgroup = 'fulgora-processes',
         order = 'f[refining]-a[crushed-holmium-liquefaction]',
@@ -310,11 +295,7 @@ data:extend({
     {
         type = 'recipe',
         name = 'plastic-bar-from-carbon',
-        icons = {
-            shift.top_left{ icon = '__space-age__/graphics/icons/carbon.png', mipmaps = 4, scale = sqrt2, floating = true },
-            shift.top_right{ icon = '__base__/graphics/icons/fluid/light-oil.png', mipmaps = 4, scale = sqrt2, floating = true },
-            { icon = '__base__/graphics/icons/plastic-bar.png', mipmaps = 4, scale = 2 },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/icons/plastic-bar-from-carbon.png',
         categories = { 'chemistry' },
         subgroup = 'fulgora-processes',
         order = 'f[refining]-b[plastic]',
@@ -334,10 +315,7 @@ data:extend({
     {
         type = 'recipe',
         name = 'advanced-electromagnetic-science-pack',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/quartz-glass-plate.png', icon_size = 1024, scale = 1 },
-            { icon = '__space-age__/graphics/icons/electromagnetic-science-pack.png', icon_size = 64, mipmaps = 4, scale = 8, shift = {-256,-256} },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/icons/advanced-electromagnetic-science-pack.png',
         categories = { 'electromagnetics' },
         subgroup = 'fulgora-processes',
         order = 'g[science]-b[advanced-electromagnetic-pack]',
@@ -352,5 +330,6 @@ data:extend({
         },
         results = { { type = 'item', name = 'electromagnetic-science-pack', amount = 2 } },
         allow_productivity = true, -- Productivity modules re-enabled
+        surface_conditions = fulgora_only(),
     },
 })

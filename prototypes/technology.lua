@@ -6,10 +6,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'fulgoran-scavenging',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/quartz-glass-plate.png', icon_size = 1024, scale = 1 },
-            { icon = '__base__/graphics/icons/stone.png', icon_size = 64, mipmaps = 4, scale = 8, shift = {-256,-256} },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/fulgoran-scavenging.png',
+        icon_size = 256,
         prerequisites = { 'planet-discovery-fulgora' },
         effects = { {
             type = 'unlock-recipe',
@@ -26,8 +24,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'electromagnetic-sifting',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/fluid/ionized-sludge.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/electromagnetic-sifting.png',
+        icon_size = 256,
         prerequisites = { 'electromagnetic-science-pack' },
         effects = { {
             type = 'unlock-recipe',
@@ -49,8 +47,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'sludge-centrifuging',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/metallic-slurry.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/sludge-centrifuging.png',
+        icon_size = 256,
         prerequisites = { 'electromagnetic-sifting' },
         effects = { {
             type = 'unlock-recipe',
@@ -74,8 +72,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'silt-sifting',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/silica-sand.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/silt-sifting.png',
+        icon_size = 256,
         prerequisites = { 'sludge-centrifuging' },
         effects = { {
             type = 'unlock-recipe',
@@ -97,9 +95,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'silica-vitrification',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/quartz-glass-plate.png', icon_size = 1024 },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/silica-vitrification.png',
+        icon_size = 256,
         prerequisites = { 'silt-sifting' },
         effects = { {
             type = 'unlock-recipe',
@@ -124,7 +121,7 @@ data:extend({ ------------------------------------------------------------------
         type = 'technology',
         name = 'slurry-leaching',
         icon = '__fulgora-scavenger-sovereign__/graphics/technology/slurry-acid-leaching.png',
-        icon_size = 1024,
+        icon_size = 256,
         prerequisites = { 'sludge-centrifuging' },
         effects = { {
             type = 'unlock-recipe',
@@ -146,10 +143,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'holmium-extraction',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/metallic-slurry.png', icon_size = 1024, scale = 1 },
-            { icon = '__space-age__/graphics/icons/holmium-ore.png', icon_size = 64, mipmaps = 4, scale = 8, shift = {-256,-256} },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/holmium-extraction.png',
+        icon_size = 256,
         prerequisites = { 'sludge-centrifuging' },
         effects = { {
             type = 'unlock-recipe',
@@ -171,8 +166,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'holmium-crushing',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/crushed-holmium.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/holmium-crushing.png',
+        icon_size = 256,
         prerequisites = { 'holmium-extraction' },
         effects = { {
             type = 'unlock-recipe',
@@ -196,8 +191,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'superheated-heavy-oil',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/fluid/superheated-heavy-oil.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/superheated-heavy-oil.png',
+        icon_size = 256,
         prerequisites = { 'electromagnetic-sifting' },
         effects = { {
             type = 'unlock-recipe',
@@ -219,8 +214,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'thermal-dehydration',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/carbon-coke.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/thermal-dehydration.png',
+        icon_size = 256,
         prerequisites = { 'superheated-heavy-oil' },
         effects = { {
             type = 'unlock-recipe',
@@ -242,10 +237,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'carbon-synthesis',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/carbon-coke.png', icon_size = 1024, scale = 1 },
-            { icon = '__space-age__/graphics/icons/carbon.png', icon_size = 64, mipmaps = 4, scale = 8, shift = {-256,-256} },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/carbon-synthesis.png',
+        icon_size = 256,
         prerequisites = { 'thermal-dehydration' },
         effects = { {
             type = 'unlock-recipe',
@@ -267,11 +260,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'carbon-plastics',
-        icons = {
-            { icon = '__base__/graphics/technology/plastics.png', icon_size = 256, scale = 1 },
-            { icon = '__space-age__/graphics/icons/carbon.png', mipmaps = 4, scale = 2, shift = {-64,-64} },
-            { icon = '__base__/graphics/icons/fluid/light-oil.png', mipmaps = 4, scale = 2, shift = {64,-64} },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/carbon-plastics.png',
+        icon_size = 256,
         prerequisites = { 'carbon-synthesis' },
         effects = { {
             type = 'unlock-recipe',
@@ -296,10 +286,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'holmium-liquefaction',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/crushed-holmium.png', icon_size = 1024, scale = 1 },
-            { icon = '__space-age__/graphics/icons/fluid/holmium-solution.png', icon_size = 64, mipmaps = 4, scale = 8, shift = {-256,-256} },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/holmium-liquefaction.png',
+        icon_size = 256,
         prerequisites = { 'holmium-crushing', 'silt-sifting', 'thermal-dehydration' },
         effects = { {
             type = 'unlock-recipe',
@@ -321,8 +309,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'catalytic-dissolution',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/fluid/dirty-electrolyte.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/catalytic-dissolution.png',
+        icon_size = 256,
         prerequisites = { 'sludge-centrifuging', 'holmium-liquefaction' },
         effects = { {
             type = 'unlock-recipe',
@@ -344,8 +332,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'electrolyte-scrubbing',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/toxic-tar.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/electrolyte-scrubbing.png',
+        icon_size = 256,
         prerequisites = { 'catalytic-dissolution' },
         effects = { {
             type = 'unlock-recipe',
@@ -367,8 +355,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'insulated-arc-infrastructure',
-        icon = '__fulgora-scavenger-sovereign__/graphics/icons/insulated-arc-crucible.png',
-        icon_size = 1024,
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/insulated-arc-infrastructure.png',
+        icon_size = 256,
         prerequisites = { 'fulgoran-scavenging', 'silica-vitrification', 'holmium-crushing' },
         effects = { {
             type = 'unlock-recipe',
@@ -390,10 +378,8 @@ data:extend({ ------------------------------------------------------------------
     {
         type = 'technology',
         name = 'advanced-electromagnetic-science',
-        icons = {
-            { icon = '__fulgora-scavenger-sovereign__/graphics/icons/quartz-glass-plate.png', icon_size = 1024, scale = 1 },
-            { icon = '__space-age__/graphics/icons/electromagnetic-science-pack.png', icon_size = 64, mipmaps = 4, scale = 8, shift = {-256,-256} },
-        },
+        icon = '__fulgora-scavenger-sovereign__/graphics/technology/advanced-electromagnetic-science-pack.png',
+        icon_size = 256,
         prerequisites = { 'insulated-arc-infrastructure', 'electrolyte-scrubbing' },
         effects = { {
             type = 'unlock-recipe',

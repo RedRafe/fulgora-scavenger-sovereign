@@ -21,5 +21,11 @@
       "command": "chmod +x ./.vscode/tasks/clear.sh ; ./.vscode/tasks/clear.sh",
       "group": "build",
     },
+    {
+      "label": "Generate mipmaps",
+      "type": "shell",
+      "command": "python3 ./.vscode/make_archive_mipmaps.py",
+      "group": "build",
+    },
   ]
 }
